@@ -1,0 +1,9 @@
+# AWS credentials (hardcoded - use with caution)
+aws_access_key_id = '????'
+aws_secret_access_key = '?????'
+aws_region = 'eu-west-2'  # or your preferred region
+
+# File Details
+input_data = 'input_data_file.csv'
+s3_location = 's3://etl-test-bucket-exercise/data/'
+output_dir = 'output_parquet'
