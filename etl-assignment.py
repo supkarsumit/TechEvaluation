@@ -79,7 +79,7 @@ def load(df: pd.DataFrame, output_root: str):
 
 def main():
 
-    input_csv = "s3://etl-test-bucket-exercise/data/input_data_file.csv"
+    input_csv = "s3://etl-test-bucket-exercise/data/sales_data_file.csv"
     output_dir = "output_parquet"
 
 
@@ -96,4 +96,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
