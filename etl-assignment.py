@@ -14,6 +14,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 # TODO: AWS SDk library
 from pathlib import Path
+import os
 
 
 def extract(input_path: str) -> pd.DataFrame:
@@ -57,13 +58,11 @@ def transform(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def load(df: pd.DataFrame, output_root: str):
+def load(df: pd.DataFrame, output_path: str):
     """
     Write the DataFrame as partitioned Parquet files.
     One folder per year_month.
     """
-    output_path = Path(output_root)
-    output_path.mkdir(parents=True, exist_ok=True)
 
     # TODO: Group by the partition column (year_month)
     # Example:
@@ -98,3 +97,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
